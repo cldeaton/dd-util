@@ -3,16 +3,16 @@ const defaults = function (object, ...sources) {
   for (var i = 0; i < sources.length; i++) {
     let source = sources[i];
     let sourceKeys = Object.keys(source);
-    if (object.hasOwnProperty(sourceKey)===false) {
-    object[sourceKey] = source[sourceKey];
-  }
+    sourceKeys.forEach(sourceKey => {
+      if (object.hasOwnProperty(sourceKey)===false) {
+      object[sourceKey] = source[sourceKey];
+    }
+    });
 }
   return object;
 }
 
 // defaultsDeep
-
-
 const defaultsDeep = function (object, ...sources) {
   let ogKey = Object.keys(object);
   for (i = 0; i < sources.length; i++){
@@ -35,18 +35,6 @@ const defaultsDeep = function (object, ...sources) {
 }
 
 // diff
-const a = {
-  foo: 20,
-  bar: 'hello world',
-  buzz: '123456789',
-};
-
-const b = {
-  foo: 25,
-  bar: 'hello world',
-  buzz: '123',
-};
-
 const diff = function (obj1, obj2) {
   function diffFunc (different, key)  {
     if (obj1[key] === obj2[key]) return difference
@@ -59,8 +47,6 @@ const diff = function (obj1, obj2) {
   Object.keys(obj2).reduce((diffFunc), {});
   return different;
 }
-
-
 
 
 module.exports = {
