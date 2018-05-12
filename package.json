@@ -1,8 +1,8 @@
 {
-  "name": "dd-shiftby",
+  "name": "dd-util",
   "version": "1.0.0",
   "description": "",
-  "main": "dd-shiftby.js",
+  "main": "dd-util.js",
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch"
