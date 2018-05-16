@@ -29,7 +29,7 @@ npm install --save dd-util
 And in Node:
 
 ```
-const {defaults, defaultsDeep, diff} = require('./dd-util');
+const {defaults, defaultsDeep, diff} = require('dd-util');
 ```
 
 ## Examples
